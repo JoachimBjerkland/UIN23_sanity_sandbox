@@ -4,6 +4,8 @@ import {useEffect, useState} from 'react'
 import Frontpage from './pages/Frontpage';
 import { Route, Routes } from 'react-router-dom';
 import ProductPage from './pages/ProductPage';
+import CategoriesPage from './pages/CategoriesPage';
+import CategoryPage from './pages/CategoryPage';
 
 function App() {
 
@@ -25,7 +27,7 @@ function App() {
       <Route index element={<Frontpage products={prods} />} />
       <Route path=":slug" element={<ProductPage />} />
       <Route path="kategori" element={<CategoriesPage />}>
-        <Route path=":category" element={<CategoryPage />} />
+        <Route path="kategori/:category" element={<CategoryPage />} />
       </Route>
     </Routes>
     
