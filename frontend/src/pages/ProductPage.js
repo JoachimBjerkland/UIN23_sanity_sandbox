@@ -13,7 +13,7 @@ export default function ProductPage() {
     //løse opp promise, og få ut data fra Sanity
     const getProduct = async (slug) => {
         const data = await fetchProduct(slug)
-        setProduct(data)
+        setProduct(data[0])
     }
 
         //Kjøre getProduct når komponentet lastes
@@ -25,6 +25,6 @@ export default function ProductPage() {
         console.log(product)
 
     return (
-        <h1>Produktside for {slug}</h1>
+        <h1>{product.product_title}</h1>
     )
 }
