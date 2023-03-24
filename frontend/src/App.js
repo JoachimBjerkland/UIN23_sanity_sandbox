@@ -21,7 +21,7 @@ console.log(prods)
 
 return (
   <Routes>
-    <Route index element={<Frontpage} products={}/>
+    <Route />
     <Route />
   </Routes>
 )
