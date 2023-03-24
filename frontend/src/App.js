@@ -26,7 +26,8 @@ function App() {
     <Routes>
       <Route index element={<Frontpage products={prods} />} />
       <Route path=":slug" element={<ProductPage />} />
-      <Route path="kategori" element={<CategoriesPage />}>
+      <Route path="kategori">
+      <Route index element={<CategoriesPage />}/>
         <Route path="kategori/:category" element={<CategoryPage />} />
       </Route>
     </Routes>
