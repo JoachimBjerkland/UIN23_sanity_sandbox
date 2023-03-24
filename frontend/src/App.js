@@ -20,7 +20,7 @@ function App() {
     getProducts()
   }, [])
 
-  console.log(prods)
+  console.log(prods))
 
   return (
     <Routes>
