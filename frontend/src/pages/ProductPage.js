@@ -25,6 +25,11 @@ export default function ProductPage() {
         console.log(product)
 
     return (
+        <>
         <h1>{product.product_title}</h1>
+        <img style={{maxWidht: "400px"}} alt={`produktbilde av ${product?.product_title}`} src={product?.imageURL} />
+        <p>Kategori: {product?.catname}</p>
+        <p>Pris: {product?.price}</p>
+        </>
     )
 }
