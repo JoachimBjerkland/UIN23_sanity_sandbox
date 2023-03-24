@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
 
-  let PROJECTID = 'i17koiiz'
+  let PROJECTID = 'agkqi49r'
   let DATASET = 'production'
   let QUERY = encodeURIComponent('*[_type == "products"]')
   let URL = `https://${PROJECTID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`
@@ -13,5 +13,17 @@ function App() {
     <h1>Innhold fra Sanity</h1>
   );
 }
+useEffect(() => {
+  getProducts()
+}, [])
+
+console.log(prods)
+
+return (
+  <Routes>
+    <Route index element={<Frontpage} products={}/>
+    <Route />
+  </Routes>
+)
 
 export default App;
