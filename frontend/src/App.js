@@ -12,7 +12,7 @@ function App() {
   const [prods, setProds] = useState(null)
 
   const getProducts = async () => {
-    const data = await fetchAllProducts()
+    const data = await fetchAllProducts(
     setProds(data)
   }
 
