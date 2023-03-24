@@ -27,11 +27,10 @@ function App() {
       <Route index element={<Frontpage products={prods} />} />
       <Route path=":slug" element={<ProductPage />} />
       <Route path="kategori">
-      <Route index element={<CategoriesPage />}/>
-        <Route path="kategori/:category" element={<CategoryPage />} />
+        <Route index element={<CategoriesPage />} />
+        <Route path=":category" element={<CategoryPage />} />
       </Route>
     </Routes>
-    
   );
 }
 
